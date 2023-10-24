@@ -1,4 +1,4 @@
-from leap_year import isLeapYear
+from src.leap_year import isLeapYear
 
 
 def test_invalidInput():
