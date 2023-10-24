@@ -3,7 +3,7 @@ name: Python Tests
 on:
   push:
     branches:
-      - main 
+      - main
 
 jobs:
   build:
@@ -19,8 +19,11 @@ jobs:
           python-version: 3.9
 
       - name: Install dependencies
-        run: pip install -r requirements.txt 
+        run: pip install -r requirements.txt
+
+      - name: Set PYTHONPATH
+        run: export PYTHONPATH=$PYTHONPATH:$GITHUB_WORKSPACE
 
       - name: Run tests
-        run: pytest  
+        run: pytest
 
