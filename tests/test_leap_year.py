@@ -12,11 +12,11 @@ def test_invalidInput():
 
 def test_yearIsDivisibleByFour():
     if 2000 % 4 == 0:
-        return True
+        assert True
 
 
 def test_yearIsDivisibleByFourAndNotByHundred():
-    if test_yearIsDivisibleByFour == True:
+    if test_yearIsDivisibleByFour is True:
         if 2000 % 100 != 0:
             return True
 
@@ -28,34 +28,34 @@ def test_yearIsDivisibleByFourhundred():
 
 def test_isLeapYear2000():
     # 2000 is a leap year, and should therefore return True
-    assert isLeapYear(2000) == True
+    assert isLeapYear(2000) is True
 
 
 def test_isNotLeapYear1700():
     # 1700 is not a leap year, and should therefore return False
-    assert isLeapYear(1700) == False
+    assert isLeapYear(1700) is False
 
 
 def test_isNotLeapYear1800():
     # 1800 is not a leap year, and should therefore return False
-    assert isLeapYear(1800) == False
+    assert isLeapYear(1800) is False
 
 
 def test_isNotLeapYear1900():
     # 1900 is not a leap year, and should therefore return False
-    assert isLeapYear(1900) == False
+    assert isLeapYear(1900) is False
 
 
 def test_isNotLeapYear2100():
     # 2100 is not a leap year, and should therefore return False
-    assert isLeapYear(2100) == False
+    assert isLeapYear(2100) is False
 
 
 def test_negativeYear():
     # Negative years should return False
-    assert isLeapYear(-2000) == False
-    assert isLeapYear(-1800) == False
+    assert isLeapYear(-2000) is False
+    assert isLeapYear(-1800) is False
 
 
 def test_yearZero():
-    assert isLeapYear(0) == False
+    assert isLeapYear(0) is False
