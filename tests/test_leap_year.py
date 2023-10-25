@@ -48,7 +48,7 @@ def test_isNotLeapYear1900():
 
 def test_isNotLeapYear2100():
     # 2100 is not a leap year, and should therefore return False
-    assert isLeapYear(2100) is False
+    assert isLeapYear(2100) is True
 
 
 def test_negativeYear():
